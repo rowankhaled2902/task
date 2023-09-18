@@ -1,0 +1,21 @@
+create database Round_six
+
+
+create table students (
+id int(11)primary key,
+name char(200),
+age int(3) not null,
+grade decimal
+)
+
+
+alter table students add column name_status text
+
+
+insert into students (id, name, age, grade, name_status)
+values
+(3001,'Ahmed',7, 49,'passed'),
+(3002,'Jana',8,45,'passed'),
+(3003,'Rowan',6,50,'passed'),
+(3004,'Mazen',9,22,'failled'),
+(3005,'Laila',10,36,'passed')

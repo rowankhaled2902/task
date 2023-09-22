@@ -1,0 +1,76 @@
+CREATE TABLE students2 (id int UNIQUE AUTO_INCREMENT, first_name char(20), last_name char(20),nationl_id char(20) UNIQUE, subject text not null , age int , CHECK(age>18) ,grade int ,status char(20) DEFAULT 'new')
+
+
+insert into students2 (id,first_name,last_name,nationl_id,subject,age,grade)
+values
+(01,'Ahmed','Bahaa',3007,'English',19,81),
+(02,'Rowan','Lotfy',3003,'Germany',23,99),
+(03,'Eyad','Mamdouh',3008,'English',19,72),
+(04,'Waleed','Ali',3000,'Arabic',20,85),
+(05,'Ali','Mansour',3001,'Biology',22,77),
+(06,'Aya','samy',3009,'Math',22,19),
+(07,'Mostafa','Elbanna',3004,'Germany',20,66),
+(08,'Eman','Nassar',3005,'Arabic',21,75),
+(09,'sara','Wael',3006,'Biology',19,25),
+(10,'Mohammed','Alaaa',3002,'Math',21,95);
+
+
+SELECT first_name, last_name from students2 where age=20
+
+
+
+
+SELECT * FROM students2 ORDER BY first_name ASC
+SELECT * FROM students2 ORDER BY first_name DESC
+
+
+
+
+
+UPDATE students2 SET first_name='hanaa' WHERE id=3
+
+
+
+
+DELETE FROM students2 WHERE grade<30
+
+
+
+
+CREATE VIEW testview AS
+SELECT * from students2
+select * FROM testview
+
+
+
+
+
+
+
+
+
+<?php
+
+$connection = new mysqli ('localhost','root','');
+if ($connection->connect_error) {
+
+    die("failed");
+}
+
+echo "connected successfully";
+?>
+
+
+
+
+
+
+
+<?php
+try{
+$connection = new pdo ("mysql:host=localhost;dbname=round_six",'root','');
+echo "connected successfully";
+}catch (PDOEXCEPTION $e) {
+    echo $e;
+}
+?>

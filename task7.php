@@ -179,7 +179,6 @@ $conn=null;
         
         ">show </a></td>
         
-        <!-- <td><a href="show.php?id=<?php echo $student['id'] ?>">show student</a></td> -->
     </tr>
 
         <?php

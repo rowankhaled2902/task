@@ -1,36 +1,36 @@
 <?php
 
-// try{
+try{
 
-// $pdo=new pdo ("mysql:host=localhost","root","");
-// echo "connected sucessfuly";
-// $pdo->query("create database customers");
+ $pdo=new pdo ("mysql:host=localhost","root","");
+ echo "connected sucessfuly";
+ $pdo->query("create database customers");
 
-// }catch(PDOEXCEPTION $e){
+ }catch(PDOEXCEPTION $e){
 
-//     echo $e ;
-// }
+     echo $e ;
+ }
 
 // ---------------------------------------------------------------------------
-// try{
+ try{
 
-// $pdo=new pdo ("mysql:host=localhost;dbname=customers","root","");
-// echo "connected sucessfuly";
-// $pdo->query("create table customers(id int(20) auto_increment primary key,
-// fname text(20),
-// lname text(20),
-// email text(20),
-// address text(20),
-// age int(20))");
+ $pdo=new pdo ("mysql:host=localhost;dbname=customers","root","");
+echo "connected sucessfuly";
+ $pdo->query("create table customers(id int(20) auto_increment primary key,
+ fname text(20),
+ lname text(20),
+ email text(20),
+ address text(20),
+ age int(20))");
 
-// }catch(PDOEXCEPTION $e){
+ }catch(PDOEXCEPTION $e){
 
-//     echo $e ;
-// }
+     echo $e ;
+ }
 
 // -----------------------------------------------------------------------
 ?>
-<!-- 
+ 
 <!DOCTYPE html>
  <html lang="en">
 
@@ -52,34 +52,34 @@
     </form>
  </body>
 
-</html> -->
+</html>
 <?php
-// try{
-//    $pdo= new pdo ("mysql:host=localhost;dbname=customers","root","");
-// //echo "connected successfully";
+ try{
+    $pdo= new pdo ("mysql:host=localhost;dbname=customers","root","");
+ echo "connected successfully";
 
-// //var_dump($_POST);
+var_dump($_POST);
 
-// $fname = $_POST['fname'];
-// $lname = $_POST['lname'];
-// $email = $_POST['email'];
-// $address = $_POST['address'];
-// $age = $_POST['age'];
-
-
-
-// $pdo->query("insert into customers(fname,lname,email,address,age)
-// values ('$fname','$lname','$email','$address','$age')");
-// echo"inserted";
-
-// } catch(PDOEXCEPTION $error){
-//      echo $error ;
-
-// }
+ $fname = $_POST['fname'];
+ $lname = $_POST['lname'];
+ $email = $_POST['email'];
+ $address = $_POST['address'];
+ $age = $_POST['age'];
 
 
 
-// $pdo=null;
+ $pdo->query("insert into customers(fname,lname,email,address,age)
+ values ('$fname','$lname','$email','$address','$age')");
+ echo"inserted";
+
+ } catch(PDOEXCEPTION $error){
+      echo $error ;
+
+ }
+
+
+
+ $pdo=null;
 
 
 //------------------------------------------------------------
